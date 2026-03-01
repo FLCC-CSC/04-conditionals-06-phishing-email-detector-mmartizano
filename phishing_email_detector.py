@@ -23,10 +23,14 @@ def phish():
     print()
     print('SECURITY ASSESSMENT:')
 
-    if 'urgent' or 'immediate action required' in subject.lower():
+    if 'urgent' in subject.lower():
         print('HIGH RISK: Possible phishing attempt.')
-    elif 'win' or 'free' in subject.lower():
+    elif 'immediate action required' in subject.lower():
+        print('HIGH RISK: Possible phishing attempt.')
+    elif 'win' in subject.lower():
         print('MEDIUM RISK: Suspicious offer dectected')
+    elif 'free' in subject.lower():
+        print('MEDIUM RISK: Suspicious offer dectected')     
     elif 'password reset' in subject.lower():
         print('LOW RISK: Verify legitimacy with sender.')
     else:
